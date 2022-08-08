@@ -1,0 +1,15 @@
+<hello name="{{ name }}"></hello>
+<p>Start editing to see some magic happen :)</p>
+<!app-mycounter [(count)]="parentCount">
+<!/app-mycounter>
+parent count {{ parentCount }}
+<!button (click)="clearCount()">Reset child count<!/button>
+
+<app-gameapp
+  (incrementOnInterval)="OnincreamentOnEachInterval($event)"
+></app-gameapp>
+
+<p>OutPuts</p>
+
+<app-odd *ngFor="let oddNum of oddNums" [oddNumber]="oddNum"> </app-odd>
+<app-even *ngFor="let evenNum of evenNums" [evenNumber]="evenNum"> </app-even>
